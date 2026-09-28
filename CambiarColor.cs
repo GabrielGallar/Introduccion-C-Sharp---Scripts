@@ -29,7 +29,7 @@ public class CambiarColor : MonoBehaviour
             {
                 colorNuevo.r = Random.value;
             }
-            if (posicion == 1)
+            else if (posicion == 1)
             {
                 colorNuevo.g = Random.value;
             }
