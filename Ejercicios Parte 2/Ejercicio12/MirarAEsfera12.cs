@@ -17,6 +17,10 @@ public class MirarAEsfera : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.W))
+        {
+            transform.Translate(Input.GetAxis("Horizontal") * speed * Time.deltaTime, 0, Input.GetAxis("Vertical") * speed * Time.deltaTime);
+        }
         transform.LookAt(posicionEsfera);
         direction = posicionEsfera - transform.position;
         direction = direction.normalized;
